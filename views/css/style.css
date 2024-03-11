@@ -1,0 +1,205 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+#container {
+    height: 640px;
+    width: 1200px;
+    position: relative;
+    overflow: hidden;
+}
+/*dino在視窗高度*/
+#container #dino {
+    height: 190px;
+    width: 70px;
+    position: absolute;
+    bottom: 28px;
+    left: 20px;
+}
+/*dino本身高度*/
+#container #dino img {
+    height: 90px;
+    width: 90px;
+}
+
+.dinoActive {
+    animation: animateDino 0.5s linear infinite;
+}
+/*dino跳得高度*/
+@keyframes animateDino {
+
+    0%,
+    100% {
+        bottom: 28px;
+    }
+
+    45%,
+    55% {
+        bottom: 260px;
+    }
+}
+/*仙人掌*/
+#container #block {
+    height: 320px;
+    width: 125px;
+    position: absolute;
+    bottom: 20px;
+    right: -20px;
+}
+
+#container #block img {
+    height: 280px;
+    width: 325px;
+}
+
+.blockActive {
+    animation: blockAnimate 1s linear infinite;
+}
+/*仙人掌移動速度*/
+@keyframes blockAnimate {
+    0% {
+        right: -25px;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
+#container #road {
+    height: 200px;
+    width: 1200px;
+    position: absolute;
+    bottom: 0;
+}
+
+#container #road img {
+    height: 200px;
+    width: 2000px;
+    position: absolute;
+    left: 0;
+    animation: none;
+}
+
+@keyframes roadAnimate {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -800px
+    }
+}
+
+#container #cloud {
+    height: 80px;
+    width: 200px;
+    /*border-radius: 40px;*/
+    position: absolute;
+    /*top: 30px;*/
+    top: 50px;
+}
+
+#container #cloud img {
+    height: 465px;
+    width: 1500px;
+    position: absolute;
+    left: 0;
+    /*left: -2000px;*/
+    animation: none;
+}
+
+@keyframes cloudAnimate {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -300px;
+    }
+}
+
+#score {
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 55px;
+    right:10px;
+    font-size:30px;
+}
+
+#gameOver {
+    display: none;
+    position: absolute;
+    left: calc(50% - 165px);
+    top: calc(50% - 175px);
+    width: 362px;
+    height: 80px;
+}
+
+#container #gameOver img {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    left: 0;
+    /*left: -2000px;*/
+    animation: none;
+}
+
+#start {
+    display: block;
+    position: absolute;
+    left: calc(50% - 165px);
+    top: calc(50% - 140px);
+    width: 362px;
+    height: 80px;
+}
+
+#container #start img {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    left: 0;
+    /*left: -2000px;*/
+    animation: none;
+}
+
+/* #myDialog {
+    position:absolute;
+    top:calc(50% - 160px);
+    left: calc(50% - 165px);
+} */
+
+#rank{
+    width:50px;
+    height:auto ;
+    position: absolute;
+    top: 170px;
+    left: 145px;
+}
+
+#login{
+    position: absolute;
+    left: calc(50% - 165px);
+    top: calc(50% - 160px);
+    width: 362px;
+    height: auto;
+}
+
+#login input {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    left: 0;
+    /*left: -2000px;*/
+    animation: none;
+}
